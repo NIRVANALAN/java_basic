@@ -82,6 +82,21 @@ public class main  implements function<Double> {
         }
 //        System.out.println("txt content:"+txt_content.read);
 
+        System.out.println("--------binary IO----------");
+
+        DataOutputStream outputStream = new DataOutputStream(new FileOutputStream("binaryIO.dat"));
+        outputStream.writeInt(65);
+
+        RandomAccessFile randomAccessFile = new RandomAccessFile("binaryIO.dat","r");
+        DataInputStream dataInputStream = new DataInputStream(new FileInputStream("binaryIO.dat"));
+        int ioInt = dataInputStream.readInt();
+        System.out.println("binary content:"+ioInt);
+
+
+
+
+
+
 
 
 
