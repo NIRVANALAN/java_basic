@@ -1,5 +1,5 @@
 import com.sun.org.apache.bcel.internal.generic.INSTANCEOF;
-
+import java.applet.*;
 import java.io.*;
 import java.math.BigInteger;
 import java.nio.charset.Charset;
@@ -91,28 +91,14 @@ public class main  implements function<Double> {
         DataInputStream dataInputStream = new DataInputStream(new FileInputStream("binaryIO.dat"));
         int ioInt = dataInputStream.readInt();
         System.out.println("binary content:"+ioInt);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
-    public static void reaData(Scanner in){
+    private static void reaData(Scanner in){
         String line = in.nextLine();
         System.out.println(line);
     }
 
-    public static void writeData(FileWriter fileWriter) throws IOException {
+    private static void writeData(FileWriter fileWriter) throws IOException {
         PrintWriter printWriter = new PrintWriter(fileWriter,true); //autoFlush is indispensable
         String name = "Harry hacker lan";
         double salary = 7000;
